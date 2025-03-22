@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 قرعه‌کشی ویژه</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js');
+    });
+  }
+</script>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎊 قرعه‌کشی باحال 🎊</h1>
+
+    <div class="inputs">
+      <input type="number" id="start" placeholder="از شماره..." />
+      <input type="number" id="end" placeholder="تا شماره..." />
+      <input type="number" id="count" placeholder="تعداد برنده‌ها" />
+    </div>
+
+    <button onclick="drawLottery()" id="drawBtn">🎯 قرعه‌کشی کن</button>
+
+    <div id="result" class="result-box">
+      <p id="loading" class="loading">در حال انتخاب...</p>
+      <div id="winners" class="winners hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
